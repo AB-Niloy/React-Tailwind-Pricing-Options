@@ -8,7 +8,7 @@ function App() {
 
     <header>
       <NavBar></NavBar>
-      <DaisiNav></DaisiNav>
+      {/* <DaisiNav></DaisiNav> */}
     </header>
 
     <main>
