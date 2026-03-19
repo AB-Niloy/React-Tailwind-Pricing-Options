@@ -1,5 +1,4 @@
-{
-  "pricingPlans": [
+[
     {
       "id": 1,
       "name": "Basic Plan",
@@ -51,4 +50,3 @@
       ]
     }
   ]
-}
