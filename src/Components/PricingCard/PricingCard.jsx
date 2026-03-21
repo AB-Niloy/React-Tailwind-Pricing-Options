@@ -6,7 +6,7 @@ const PricingCard = ({pricing}) => {
     console.log(pricing);
     const {name, price, duration, description, features} = pricing;
     return (
-        <div className='flex flex-col border border-orange-400 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-6 text-white shadow-lg'>
+        <div className='flex flex-col border border-orange-400 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-6 text-white shadow-lg md:mx-6'>
             {/* Card Header */}
             <div>
                 <h1 className="text-7xl">{name}</h1>

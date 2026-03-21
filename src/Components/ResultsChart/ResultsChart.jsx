@@ -1,5 +1,5 @@
 import React from 'react';
-import { Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts';
+import { Line, LineChart, Tooltip, XAxis, YAxis,ResponsiveContainer } from 'recharts';
 
 const resultData = [
   { "id": 1, "name": "Rahim", "phy": 85, "che": 80, "math": 90 },
@@ -16,16 +16,32 @@ const resultData = [
 
 const ResultsChart = () => {
     return (
-        <div>
-            <LineChart width={800} height={500} data={resultData}>
-                <XAxis dataKey={'name'}></XAxis>
-                <YAxis></YAxis>
-                <Line dataKey={'math'}></Line>
-                <Line dataKey={'phy'} stroke='red'></Line>
-                <Line dataKey={'che'} stroke='green'></Line>
-                <Tooltip></Tooltip>
-            </LineChart>
-        </div>
+            <div className="w-full h-[250px] md:h-[500px]">
+                  <ResponsiveContainer width="100%" height="100%">
+
+                    <LineChart data={resultData}>
+                      <XAxis dataKey="name" />
+                      <YAxis />
+                      <Tooltip />
+
+                      <Line type="monotone" dataKey="math" />
+                      <Line type="monotone" dataKey="phy" stroke="red" />
+                      <Line type="monotone" dataKey="che" stroke="green" />
+                    </LineChart>
+
+                  </ResponsiveContainer>
+            </div>
+
+        // <div>
+        //     <LineChart width={800} height={500} data={resultData}>
+        //         <XAxis dataKey={'name'}></XAxis>
+        //         <YAxis></YAxis>
+        //         <Line dataKey={'math'}></Line>
+        //         <Line dataKey={'phy'} stroke='red'></Line>
+        //         <Line dataKey={'che'} stroke='green'></Line>
+        //         <Tooltip></Tooltip>
+        //     </LineChart>
+        // </div>
     );
 };
 
